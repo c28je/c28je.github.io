@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.sauce{
+			font-size:10px;
+			display:inline-block;
+			width:100px;
+			height:150px;
+			background-image:url(ketchups.png);
+			background-size:contain;
+		}
+
+		#ketchup1:hover{
+			background-color:blue;
+		}
+
+		#ketchup2:hover{
+			background-color:purple;
+		}
+	</style>
+</head>
+
+
+<body>
+<center> Ketchup Counter</center>
+
+<script type="text/javascript">
+	
+	let counter=0
+
+	function makeKetchup(){
+		let ketchup = document.createElement("div")
+		document.body.appendChild(ketchup)
+		ketchup.classList.add("sauce")
+		counter=counter+1
+		ketchup.innerText = counter
+
+		ketchup.id="ketchup"+counter;
+
+		if(counter == 6) {
+			 clearInterval(x)
+
+
+		}
+
+	}
+
+
+let x = setInterval(makeKetchup, 1000)
+// setInterval(makeKetchup, 1000)
+
+
+// ketchup1.addEventListener("click", function(){
+// 	console.log('hello')
+// 	alert("did you really think ketchups could talk?!")
+// })
+
+
+</script>
+
+</body>
+
+
+
+</html>

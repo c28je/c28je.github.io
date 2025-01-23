@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+		body{
+			font-size:50px;
+
+		}
+		#text{
+			position:relative;
+/*			top:400px;*/
+			width:400px;
+			height:400px;
+		}
+
+		h1{
+		/*top:1px;
+		bottom:1px;*/
+		font-size:40px;
+		}
+	</style>
+</head>
+<body>
+	<br><br><br>
+
+<center>
+	<h1> Songs to Learn Over Break: </h1>
+
+	<div id="text"></div>
+	<div id="title"></div>
+</center>
+
+
+<script type="text/javascript">
+	let list = ["Margaret - Lana Del Rey", "Turning Page - Sleeping at Last", "The Cut That Always Bleeds - Conan Grey", "Velvet Ring - Big Thief", "Mary - Alex G", "Cold - Chris Stapelton"]
+
+	document.addEventListener("click", function(){
+		let random = Math.floor(Math.random()*5)
+		let random2 = Math.floor(Math.random()*2)
+
+		text.innerText = list[random]
+
+	})
+</script>
+</body>
+</html>

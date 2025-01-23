@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#box {
+			width:100px;
+			height:100px;
+			background-color:lightblue;
+			border-radius:10%;
+		}
+	</style>
+</head>
+<body>
+
+	<audio id="sound" src="monkeySpinning.mp3"></audio>
+
+<div id = "box"></div>
+
+<script type="text/javascript">
+	
+	let lightswitch = true 
+
+	box.addEventListener("click", function(){
+		console.log(lightswitch)
+	
+	if (lightswitch==true){
+		box.style.backgroundColor="magenta"
+		sound.play()
+		lightswitch = false
+		console.log(lightswitch)
+
+	} else if (lightswitch==false){
+		box.style.backgroundColor="lightblue"
+		sound.pause()
+		lightswitch = true
+		console.log(lightswitch)
+	}
+
+	})
+
+
+	// console.log
+
+	// function hey (){
+	// 	console.log ("hello!")
+	// }
+
+	// hey()
+</script>
+</body>
+</html>

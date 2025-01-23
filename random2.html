@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		#coordinate {
+			width:100px;
+			height:100px;
+			position:absolute;
+			border-radius:50%;
+			background-color:blue;
+		}
+	</style>
+
+</head>
+<body>
+
+<div id = "coordinate"></div>
+<script type="text/javascript">
+	function move (){
+		let x = Math.random()*700+"px"
+		let y = Math.random()*700+"px"
+
+		coordinate.style.left = x
+		coordinate.style.top = y
+	}
+
+	function colorchange(){
+		let r = Math.random()*255
+		let g = Math.random()*255
+		let b = Math.random()*255
+		coordinate.style.backgroundColor = "rgb("+r+","+g+", "+b+")"
+	}
+
+	setInterval(move, 1000)
+	setInterval(colorchange, 1000)
+
+
+</script>
+</body>
+</html>
