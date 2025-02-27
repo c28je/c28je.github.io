@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+
+	body{
+	width:1200px;
+	height:1000px;
+	background-image:url(valentine.jpg);
+	}
+
+	.confetti{
+			/*width:100px;
+			height:100px;*/
+			position: absolute;
+			background-color:lightpink;
+			z-index: 1;
+		}
+	
+
+	#envelope{
+		position:relative;
+		width:329px;
+		height:262px;
+		margin-top:200px;
+		background-color:rgb(255,228,184);
+		z-index: 0;
+
+	}
+
+	#square{
+/*		background-color:blue;*/
+/*		background-size:cover;*/
+		position:absolute;
+		width:220px;
+		height:220px;
+		top:-95px;
+		left:55px;
+		transform:rotate(45deg);
+/*		opacity:0;*/
+		transition:3s;
+		background-color:lightpink;
+		  opacity:0;
+/*		background-color: rgb(255,228,184);*/
+	}
+
+	#line1{
+		width:2px;
+		height:234px;
+		position:relative;
+		top:-34px;
+		left:-82px;
+		/*margin-top:-299px;
+		margin-left:217px;*/
+		background-color:rgb(201,170,119);
+		transform:rotate(135deg);
+		z-index: 8;
+		transition:2s;
+	}
+
+
+	#line2{
+		width:2px;
+		height:234px;
+		position:relative;
+		top:-265px;
+		left:85px;
+		/*margin-top:-299px;
+		margin-left:217px;*/
+		background-color:rgb(201,170,119);
+		transform:rotate(43deg);
+		z-index: 8;		
+		transition:2s;
+
+
+	}
+
+	#heart{
+		width:40px;
+		height:40px;
+		background-image:url(heart.png);
+		background-size:contain;
+		z-index: 10;
+		position: absolute;
+		left:46%;
+		top:51%;
+		transition:2s;
+	}
+
+	@font-face { font-family: Valentine; src: url('MisterValentine.otf'); } 
+      h1 {
+         font-family: Valentine
+         }
+</style>
+</head> 
+<body>
+
+
+	<center>
+
+	<div id="envelope">
+		<div id="square"></div>
+
+			<div id = "heart"></div>
+
+			<div id="line1"></div>
+			<div id="line2"></div>
+
+	</div>
+
+	<h1 style="color:darkred; opacity:0; transition: opacity 3s;"> HAPPY VALENTINE'S DAY MOM!!! </h1>
+
+
+	</center>
+
+
+	<script type="text/javascript">
+	let heading = document.querySelector("h1");
+
+	function makeConfetti(color){
+		let sprinkle = document.createElement("div")
+		document.body.appendChild(sprinkle)
+		sprinkle.classList.add("confetti")
+
+		//set the top to 0 so it can fall
+		sprinkle.style.top = "0px"
+		sprinkle.style.backgroundColor=color;
+		// sprinkle.style.top=Math.random()*1000+'px'
+		// sprinkle.style.left=Math.random()*1000+'px'
+
+		function fall(){
+			if (parseInt(sprinkle.style.top)>1000)
+				{sprinkle.style.top = "-100px"
+			// sprinkle.style.left = Math.random()*2000+"px"
+		}else {
+			sprinkle.style.top = parseInt(sprinkle.style.top) + Math.random()*50+"px"
+			sprinkle.style.left = Math.random()*2000+"px"
+		}
+
+	}
+
+		setInterval(fall,200)
+
+		//to randomize height and width
+		sprinkle.style.height = Math.random()*40+"px"
+		sprinkle.style.width = Math.random()*20+"px"
+
+
+		// sprinkle.style.backgroundColor = pink;
+	}// end of confetti function
+
+
+
+
+
+		heart.addEventListener("click", function(){
+			console.log("hello?")
+			line1.style.transform="rotateZ(40deg)"
+			line2.style.transform="rotateZ(-40deg)"
+				line1.style.top="-166px"
+			line2.style.top="-395px"
+			heart.style.top="-150px"
+
+			// triangle.style.opacity="1"
+			square.style.opacity="1"
+			heading.style.opacity="1"
+
+			// document.body.style.backgroundColor="rgb(255,228,184)"
+
+				for(let i=0; i <1000; i=i+1){
+
+					makeConfetti("lightpink");
+					makeConfetti("darkred");
+	}
+
+	});
+	</script>
+	<div class="confetti"></div>
+	<div class="confetti2"></div>
+</body>
+</html>
