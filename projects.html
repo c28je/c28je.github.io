@@ -8,25 +8,30 @@
 	background-size:cover;
 	width:1200px;
 	height:1000px;
-	background-image:url(grass.png);
+	background-image:url(blanket.png);
 	background-repeat:no-repeat;
 	}
+
+	.icon {
+		display: block;
+		float: left;
+		background-size: cover;
+		margin: 10px;
+    }
 	
-	#blanket{
-	width:612px;
-	height:612px;
-	background-image:url(picnicBlanket.png);
-	}
 
 	#day1 {
 		background-size:cover;
-		width:83px;
-		height:73px;
+		width:103px;
+		height:93px;
 		background-image:url(ant.png);
 		background-repeat:no-repeat;
 		position: relative;
-		left:580px;
-		top:350px;
+		top:60px;
+		/*left:580px;
+		top:350px;*/
+		display: inline-block;
+
 	}
 
 	#jumpscare {
@@ -36,19 +41,23 @@
 		background-image:url(ketchup.png);
 		background-repeat:no-repeat;
 		position: relative;
-		left:650px;
-		top:350px;
+		/*left:650px;
+		top:350px;*/
+		display: inline-block;
+		
 	}
 
 	#home{
 		background-size:cover;
 		width:180px;
 		height:170px;
-		background-image:url(basket2.png);
+		background-image:url(basket.png);
 		background-repeat:no-repeat;
 		position: relative;
-		left:465px;
-		top:-190px;
+		/*left:465px;
+		top:-190px;*/
+		display: inline-block;
+		
 	}
 
 	#randomExercise{
@@ -58,9 +67,112 @@
 		background-image:url(watermelon.png);
 		background-repeat:no-repeat;
 		position: relative;
-		left:465px;
-		top:-290px;
+		/*left:465px;
+		top:-290px;*/
+		display: inline-block;
+
 	}
+
+	 #ifElseExercise{
+	 	background-size: cover;
+        width: 200px;
+        height: 100px;
+        background-image:url(sandwhich.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    #slotBox{
+	 	background-size: contain;
+        width: 150px;
+        height: 220px;
+        background-image:url(mustard.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    .new-row {
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+    #songGenerator{
+	 	background-size: contain;
+        width: 150px;
+        height: 220px;
+        background-image:url(baguette.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    #valentines{
+	 	background-size: contain;
+        width: 120px;
+        height: 120px;
+        left:-10px;
+        background-image:url(heart.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    #musicPlayingSquare{
+	 	background-size: contain;
+        width: 150px;
+        height: 200px;
+        background-image:url(pie.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    #confetti{
+	 	background-size: contain;
+        width: 160px;
+        height: 200px;
+        background-image:url(food.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    #randomCircleWithColors{
+	 	background-size: contain;
+        width: 180px;
+        height: 220px;
+        background-image:url(juice.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+    #animation{
+	 	background-size: contain;
+        width: 200px;
+        height: 240px;
+        left:-40px;
+        top:50px;
+        background-image:url(cake.png);
+        background-repeat:no-repeat;
+		position: relative;
+		display: inline-block;
+
+    }
+
+
+
+
 
 	a{
 		font-family:courier;
@@ -77,31 +189,54 @@
 <div id="blanket">  </div> 
 
 <a href = "day1.html">
-	<div id="day1">  </div>
+	<div id="day1" class="icon" >  </div>
 </a>
 
 <a href="jumpscare.html">
-	<div id="jumpscare"> </div>
+	<div id="jumpscare" class="icon"> </div>
 </a>
 
 <a href="index.html">
-	<div id="home"> </div>
+	<div id="home" class="icon"> </div>
 </a>
 
 <a href="random2.html">
-	<div id="randomExercise "> </div>
+	<div id="randomExercise" class="icon"> </div>
 </a>
 
 <a href="ifElse.html">
-	<div id="if Else Excercise "> </div>
+	<div id="ifElseExercise" class="icon"> </div>
 </a>
 
 <a href="slotbox.html">
-	<div id="Slotbox"> </div>
+	<div id="slotBox" class="icon"> </div>
 </a>
 
+<div class="new-row"></div> 
+
 <a href="songGenerator.html">
-	<div id="Song Generator"> </div>
+	<div id="songGenerator" class="icon"> </div>
+</a> 
+
+<a href="valentines.html">
+	<div id="valentines" class="icon"> </div>
+</a> 
+
+<a href="squarePause2.html">
+	<div id="musicPlayingSquare" class="icon"> </div>
+</a> 
+
+<a href="confetti.html">
+	<div id="confetti" class="icon"> </div>
+</a> 
+ 
+
+<a href="random2.html">
+	<div id="randomCircleWithColors" class="icon"> </div>
+</a> 
+
+<a href="My_animation.html">
+	<div id="animation" class="icon"> </div>
 </a> 
 
 </body>
